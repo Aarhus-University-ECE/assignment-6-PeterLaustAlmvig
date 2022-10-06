@@ -24,8 +24,13 @@ void add(node *head, int x){
 int size(node *l){
     // Excercise 3b)
     // Add your code here... 
+    int i = 0;
+    int size_count = 0;
+    while(l[i].next != NULL){
+      size_count++;
+    }
 
-    return -1;
+    return size_count;
 }
 
 void printout(node *l) {
