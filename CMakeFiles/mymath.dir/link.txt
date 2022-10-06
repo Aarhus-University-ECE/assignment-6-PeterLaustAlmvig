@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmymath.a CMakeFiles/mymath.dir/src/max.c.o CMakeFiles/mymath.dir/src/list.c.o
+/usr/bin/ranlib libmymath.a
