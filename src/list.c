@@ -28,9 +28,9 @@ int size(node *l){
     assert(l != NULL);
     int size_count = 0;
     node *p = l;
-    while(p->next != NULL){
-      size_count++;
-      p = p->next;
+    while(p->next != NULL){ //Loop until we hit the last element which as next as NULL.
+      size_count++; //Increase counter
+      p = p->next;  //Point to the next element
     }
 
     return size_count;
@@ -40,10 +40,10 @@ void printout(node *l) {
   /*Excercise 3d) Implement your changes.. 
     pre: head points to the first, empty element. The last element's next is NULL
     post: the values of the list are printed out*/
-    node *p = l->next;
+    node *p = l->next; //Point to the first element of the list.
     while (p!=NULL){
-      printf("%d, ",p->data);
-      p = p->next;
+      printf("%d, ",p->data); //Print the number associated with pæ
+      p = p->next;  //Point to the next element.
     }
     printf("\n");
 }
@@ -52,13 +52,13 @@ int largest(node *l){
     /*Excercise 3e) Add your code below.
       pre: head points to the first, empty element. The last element's next is NULL. size(l>0)
       post: returns the largest value of the list*/
-      int max = INT_MIN;
-      node *p = l->next;
-      while (p != NULL){  
-        if(p->data > max){
+      int max = INT_MIN; //Holdes the largest element in the list.
+      node *p = l->next; //Point p to the first element of the list.
+      while (p != NULL){  //When the loops hits NULL every element has been checked.
+        if(p->data > max){ //Check the current nodes data against the current largest element.
           max = p->data;
         }
-        p = p->next;
+        p = p->next; //Point to the next element.
       }
     return max; 
 }
